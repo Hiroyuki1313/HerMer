@@ -1,7 +1,4 @@
-import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { springHover } from '../../animations/variants';
-import { getWhatsAppLink, CONTACT_LINKS } from '../../constants/links';
 import { SERVICES } from '../../constants/services';
 
 const Navbar = () => {
@@ -72,18 +69,6 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-
-      <motion.a
-        href={getWhatsAppLink(CONTACT_LINKS.DEMO_MESSAGE)}
-        target="_blank"
-        rel="noopener noreferrer"
-        variants={springHover}
-        whileHover="hover"
-        whileTap="tap"
-        className="relative overflow-hidden px-5 py-2.5 rounded-full bg-brand-dark/20 border border-brand-light/30 text-white text-sm font-medium transition-all hover:bg-brand-dark/40 shadow-[0_0_15px_rgba(12,171,227,0.15)] hover:shadow-[0_0_25px_rgba(12,171,227,0.3)] block cursor-pointer shrink-0"
-      >
-        <span className="relative z-10">Agendar Demo</span>
-      </motion.a>
     </nav>
   );
 };

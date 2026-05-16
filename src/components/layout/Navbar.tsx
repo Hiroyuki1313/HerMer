@@ -67,6 +67,18 @@ const Navbar = () => {
               );
             })}
           </div>
+
+          <div className="h-4 w-px bg-white/10 shrink-0" />
+
+          <Link
+            to="/contacto"
+            className={`text-[9px] font-bold uppercase tracking-widest transition-all px-4 py-1.5 rounded-full border ${location.pathname === '/contacto'
+                ? "text-brand-dark bg-brand-light border-brand-light"
+                : "text-neutral-300 border-white/10 hover:border-brand-light/50 hover:text-brand-light"
+              }`}
+          >
+            Contacto
+          </Link>
         </div>
       </div>
     </nav>

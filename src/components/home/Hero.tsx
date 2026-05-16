@@ -31,27 +31,13 @@ const Hero = () => {
             Digitalización, automatización (RPA), y optimización de procesos contables, financieros y de RRHH para empresas que exigen la excelencia.
           </motion.p>
 
-          <motion.div variants={fadeUpSpring} className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-            <motion.a
-              href={getWhatsAppLink("Hola Héctor, vengo de la Landing Page y me gustaría iniciar el proceso de Transformación Digital en mi empresa.")}
-              target="_blank"
-              rel="noopener noreferrer"
-              variants={springHover}
-              whileHover="hover"
-              whileTap="tap"
-              className="flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto rounded-full bg-brand-dark text-white font-medium shadow-[0_0_30px_rgba(12,171,227,0.3)] hover:shadow-[0_0_40px_rgba(12,171,227,0.5)] transition-shadow duration-300 cursor-pointer"
-            >
-              Iniciar Transformación <ArrowRight className="w-4 h-4" />
-            </motion.a>
-            <motion.a
-              href="#servicios"
-              variants={springHover}
-              whileHover="hover"
-              whileTap="tap"
-              className="px-8 py-4 rounded-full border border-white/10 bg-transparent text-white font-medium hover:bg-white/[0.03] transition-colors w-full sm:w-auto text-center cursor-pointer"
-            >
-              Explorar Servicios
-            </motion.a>
+          <motion.div variants={fadeUpSpring} className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-12">
+            {['Innovación', 'Calidad', 'Honestidad', 'Eficiencia'].map((valor, i, arr) => (
+              <div key={valor} className="flex items-center gap-6">
+                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-light/80">{valor}</span>
+                {i < arr.length - 1 && <span className="text-neutral-700 font-bold">•</span>}
+              </div>
+            ))}
           </motion.div>
         </motion.div>
       </Container>

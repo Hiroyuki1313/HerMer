@@ -3,9 +3,9 @@ import { TECH_STACK } from '../../constants/services';
 
 const TechStackTicker = () => {
   return (
-    <div className="w-full py-12 border-y border-white/5 bg-white/[0.01] overflow-hidden relative">
+    <div id="servicios" className="scroll-mt-24 w-full py-12 border-y border-neutral-100 bg-white overflow-hidden relative">
       <div className="max-w-7xl mx-auto px-6 mb-6">
-        <p className="text-xs font-mono uppercase tracking-[0.3em] text-neutral-500 text-center">
+        <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-neutral-400 text-center font-bold">
           Integración fluida con tu ecosistema tecnológico
         </p>
       </div>
@@ -19,7 +19,7 @@ const TechStackTicker = () => {
           {[...TECH_STACK, ...TECH_STACK].map((tech, idx) => (
             <span 
               key={idx} 
-              className="text-2xl md:text-3xl font-display font-bold text-neutral-700 hover:text-brand-light transition-colors duration-500 cursor-default"
+              className="text-2xl md:text-3xl font-display font-black text-neutral-900 hover:text-brand-light transition-colors duration-500 cursor-default uppercase tracking-tighter"
             >
               {tech}
             </span>

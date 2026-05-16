@@ -10,7 +10,6 @@ const HomePage = () => {
       <Hero />
       <TechStackTicker />
       <ServicesBento />
-      <MetricsROI />
       <FinalCTA />
     </>
   );

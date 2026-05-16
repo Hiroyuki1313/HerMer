@@ -16,14 +16,14 @@ const Navbar = () => {
           {isHome ? (
             <a
               href="#servicios"
-              className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 hover:text-brand-light transition-colors px-2 py-1 shrink-0"
+              className="text-[13px] font-bold uppercase tracking-[0.15em] text-neutral-400 hover:text-brand-light transition-colors px-2 py-1 shrink-0"
             >
               Servicios
             </a>
           ) : (
             <Link
               to="/#servicios"
-              className="text-[10px] font-bold uppercase tracking-[0.2em] text-neutral-500 hover:text-brand-light transition-colors px-2 py-1 shrink-0"
+              className="text-[13px] font-bold uppercase tracking-[0.15em] text-neutral-400 hover:text-brand-light transition-colors px-2 py-1 shrink-0"
             >
               Servicios
             </Link>
@@ -57,9 +57,9 @@ const Navbar = () => {
                 <Link
                   key={service.id}
                   to={`/servicios/${service.id}`}
-                  className={`text-[9px] font-bold uppercase tracking-tight transition-all px-2 py-1 rounded-md shrink-0 whitespace-nowrap ${isActive
+                  className={`text-[11px] font-bold uppercase tracking-wide transition-all px-2 py-1 rounded-md shrink-0 whitespace-nowrap ${isActive
                       ? "text-brand-light bg-brand-light/5"
-                      : "text-neutral-500 hover:text-white hover:bg-white/5"
+                      : "text-neutral-400 hover:text-white hover:bg-white/5"
                     }`}
                 >
                   {label}
@@ -72,9 +72,9 @@ const Navbar = () => {
 
           <Link
             to="/contacto"
-            className={`text-[9px] font-bold uppercase tracking-widest transition-all px-4 py-1.5 rounded-full border ${location.pathname === '/contacto'
+            className={`text-[12px] font-bold uppercase tracking-widest transition-all px-5 py-2 rounded-full border ${location.pathname === '/contacto'
                 ? "text-brand-dark bg-brand-light border-brand-light"
-                : "text-neutral-300 border-white/10 hover:border-brand-light/50 hover:text-brand-light"
+                : "text-neutral-300 border-white/20 hover:border-brand-light/50 hover:text-brand-light"
               }`}
           >
             Contacto

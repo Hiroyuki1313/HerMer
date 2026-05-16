@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
-import { staggerContainer, fadeUpSpring, springHover } from '../../animations/variants';
-import { getWhatsAppLink } from '../../constants/links';
+import { fadeUpSpring, staggerContainer } from '../../animations/variants';
 import HeroGlobe from './HeroGlobe';
 import Section from '../common/Section';
 import Container from '../common/Container';

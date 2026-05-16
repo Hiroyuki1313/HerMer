@@ -29,10 +29,10 @@ const Hero = () => {
             Digitalización, automatización (RPA), y optimización de procesos contables, financieros y de RRHH para empresas que exigen la excelencia.
           </motion.p>
 
-          <motion.div variants={fadeUpSpring} className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-12">
+          <motion.div variants={fadeUpSpring} className="flex flex-wrap items-center gap-x-8 gap-y-3 mb-12">
             {['Innovación', 'Calidad', 'Honestidad', 'Eficiencia'].map((valor, i, arr) => (
-              <div key={valor} className="flex items-center gap-6">
-                <span className="text-[10px] font-bold uppercase tracking-[0.3em] text-brand-light/80">{valor}</span>
+              <div key={valor} className="flex items-center gap-8">
+                <span className="text-[13px] font-bold uppercase tracking-[0.2em] text-brand-light/90">{valor}</span>
                 {i < arr.length - 1 && <span className="text-neutral-700 font-bold">•</span>}
               </div>
             ))}

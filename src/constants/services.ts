@@ -14,6 +14,12 @@ export interface Project {
   mockup?: string;
 }
 
+export interface BeforeAfter {
+  title: string;
+  beforeImage: string;
+  afterImage: string;
+}
+
 export interface ProcessStep {
   number: number;
   title: string;
@@ -31,6 +37,7 @@ export interface Service {
   metrics?: { value: string; label: string }[];
   features?: ServiceFeature[];
   projects?: Project[];
+  beforeAfters?: BeforeAfter[];
   processes?: ProcessStep[];
   categories?: ServiceFeature[];
   technologies?: { name: string; logo?: string; description: string }[];
@@ -166,33 +173,74 @@ export const SERVICES: Service[] = [
   {
     id: "software",
     title: "Software y Soluciones Digitales",
-    slogan: "Herramientas diseñadas para potenciar la operación de tu negocio.",
-    description: "Servicios enfocados en el diseño, implementación o mejora de herramientas digitales que soporten la operación del negocio.",
-    fullDescription: "En HERMAR Business Solutions desarrollamos software a la medida que resuelve problemas específicos. No vendemos cajas cerradas, construimos soluciones que se adaptan a tu proceso, permitiendo una transición digital fluida y eficiente hacia una operación más inteligente.",
+    slogan: "Herramientas de alto rendimiento diseñadas para escalar tu operación.",
+    description: "Desarrollo de ecosistemas digitales, plataformas web, aplicaciones móviles y arquitecturas cloud a la medida de tus objetivos de negocio.",
+    fullDescription: "En HERMAR Business Solutions no vendemos cajas cerradas ni plantillas genéricas. Desarrollamos software a la medida con arquitecturas modernas y escalables que resuelven cuellos de botella específicos. Desde la conceptualización UX/UI hasta el despliegue en la nube, construimos ecosistemas digitales que se adaptan a tu proceso, permitiendo una transición digital fluida hacia una operación más inteligente y rentable.",
     icon: Layout,
-    metricsTitle: "Indicadores de Software",
+    metricsTitle: "Impacto del Software",
     metrics: [
-      { value: "100%", label: "Disponibilidad de plataforma" },
-      { value: "UX", label: "Experiencia centrada en el usuario" },
-      { value: "Cloud", label: "Arquitectura escalable" },
-      { value: "Secure", label: "Seguridad de la información" }
+      { value: "99.9%", label: "Uptime y Alta Disponibilidad" },
+      { value: "-40%", label: "Tiempo de comercialización" },
+      { value: "100%", label: "Propiedad del Código" },
+      { value: "+50%", label: "Adopción por parte del usuario" }
     ],
     categories: [
-      { title: "Presentación web / preview", description: "Desarrollo o configuración de interfaces web para visualización de información, prototipos o presentaciones de datos.", icon: Layout },
-      { title: "E-commerce", description: "Soporte en soluciones relacionadas con comercio electrónico, catálogos digitales, ventas en línea o seguimiento comercial.", icon: Smartphone },
-      { title: "ERP personalizado", description: "Diseño, adaptación o mejora de sistemas ERP alineados a necesidades específicas del proceso o negocio.", icon: Database },
-      { title: "Sistema de inventarios", description: "Desarrollo o mejora de herramientas para control de inventario, cálculo de venta y seguimiento de movimientos.", icon: ClipboardList },
-      { title: "Aplicaciones móviles", description: "Diseño o apoyo en soluciones móviles para consulta, captura o seguimiento de información operativa.", icon: Smartphone },
-      { title: "Seguimiento de ventas", description: "Herramientas para monitorear ventas, avances comerciales, oportunidades o indicadores relacionados.", icon: Search },
-      { title: "Base de datos / infraestructura", description: "Diseño, estructuración o soporte de bases de datos necesarias para almacenar, consultar y analizar información.", icon: Database }
+      { title: "Portales Corporativos B2B", description: "Desarrollo de interfaces web seguras para gestión de proveedores, clientes e información ejecutiva.", icon: Layout },
+      { title: "Plataformas E-commerce", description: "Soluciones robustas para ventas en línea, catálogos digitales y pasarelas de pago integradas.", icon: Smartphone },
+      { title: "Sistemas ERP a la medida", description: "Arquitecturas alineadas exactamente a tus reglas de negocio sin costos de licencias por usuario.", icon: Database },
+      { title: "Gestión Inteligente de Inventarios", description: "Plataformas para control de stock en tiempo real, trazabilidad de producto y cálculos de venta.", icon: ClipboardList },
+      { title: "Aplicaciones Móviles Nativas", description: "Desarrollo iOS y Android para fuerza de ventas, operación en campo y control logístico.", icon: Smartphone },
+      { title: "Arquitectura Cloud & APIs", description: "Infraestructuras escalables (AWS/Azure) y conexión de plataformas (CRM, SAP) para eliminar silos de información.", icon: Cloud }
+    ],
+    processes: [
+      { number: 1, title: "Descubrimiento y Arquitectura", description: "Análisis profundo de requerimientos técnicos, viabilidad y definición de la arquitectura óptima." },
+      { number: 2, title: "Diseño UX/UI", description: "Creación de wireframes y prototipos interactivos enfocados en una experiencia de usuario impecable." },
+      { number: 3, title: "Desarrollo Ágil", description: "Programación en ciclos iterativos que permiten entregas tempranas y visibilidad constante del progreso." },
+      { number: 4, title: "QA y Pruebas", description: "Validación de seguridad, rendimiento bajo carga y eliminación de bugs antes de salir a producción." },
+      { number: 5, title: "Despliegue Cloud", description: "Puesta en producción en infraestructuras seguras, escalables y configuradas para alta disponibilidad." },
+      { number: 6, title: "Soporte y Evolución", description: "Monitoreo continuo, mantenimiento preventivo y desarrollo de nuevas funcionalidades alineadas al negocio." }
     ],
     features: [
-      { title: "Personalización Total", description: "Software que se adapta a tus reglas de negocio, no al revés." },
-      { title: "Interfaces Intuitivas", description: "Diseño enfocado en la facilidad de uso para reducir curvas de aprendizaje." },
-      { title: "Seguridad por Diseño", description: "Protección de datos críticos con estándares modernos de encriptación." },
-      { title: "Escalabilidad", description: "Sistemas preparados para crecer a la par de tu volumen operativo." },
-      { title: "Integración", description: "Conexión con tus herramientas actuales para evitar silos de información." },
-      { title: "Soporte Continuo", description: "Acompañamiento técnico para asegurar la continuidad de tu operación." }
+      { title: "Arquitectura Moderna", description: "Construimos sobre frameworks de última generación para asegurar velocidad y longevidad." },
+      { title: "Interfaces Intuitivas (UX)", description: "Diseño enfocado en la facilidad de uso para reducir drásticamente la curva de aprendizaje." },
+      { title: "Seguridad por Diseño", description: "Protección de datos críticos con estándares modernos de encriptación y control de accesos." },
+      { title: "Escalabilidad Cloud", description: "Sistemas elásticos preparados para crecer automáticamente junto con tu volumen operativo." },
+      { title: "Ecosistema Conectado", description: "APIs robustas que integran el nuevo software con tus herramientas empresariales actuales." },
+      { title: "Transparencia Total", description: "Acceso a repositorios, entornos de prueba y reportes durante todo el ciclo de desarrollo." }
+    ],
+    technologies: [
+      { name: "React / Next.js", logo: "https://img.icons8.com/color/48/nextjs.png", description: "Interfaces web ultrarrápidas y reactivas." },
+      { name: "Node.js", logo: "https://img.icons8.com/color/48/nodejs.png", description: "Backends escalables y orientados a eventos." },
+      { name: "PostgreSQL", logo: "https://img.icons8.com/color/48/postgreesql.png", description: "Bases de datos relacionales robustas y seguras." },
+      { name: "AWS", logo: "https://img.icons8.com/color/48/amazon-web-services.png", description: "Infraestructura cloud de clase mundial." },
+      { name: "Docker", logo: "https://img.icons8.com/color/48/docker.png", description: "Contenedores para despliegues consistentes." },
+      { name: "TypeScript", logo: "https://img.icons8.com/color/48/typescript.png", description: "Código seguro y estructurado para empresas." }
+    ],
+    projects: [
+      {
+        title: "Portal B2B Comercial",
+        description: "Plataforma de autogestión para clientes con integración en tiempo real al ERP para consulta de inventario, historial y pedidos.",
+        metrics: ["Sincronización ERP", "Catálogo dinámico", "Cotización automática"],
+        mockup: "/screencapture-vexa.png"
+      },
+      {
+        title: "App Logística en Ruta",
+        description: "App móvil para escaneo de inventario, ruteo inteligente y confirmación de entregas con firmas y coordenadas.",
+        metrics: ["Escaneo de códigos", "Ubicación GPS", "Modo offline soportado"],
+        mockup: "/screencapture-by-chino.png"
+      }
+    ],
+    beforeAfters: [
+      {
+        title: "Pantalla Principal",
+        beforeImage: "/before 1.png",
+        afterImage: "/after 1.png"
+      },
+      {
+        title: "Vista de Detalle",
+        beforeImage: "/before 2.png",
+        afterImage: "/after 2.png"
+      }
     ]
   }
 ];

@@ -3,9 +3,9 @@ import { TECH_STACK } from '../../constants/services';
 
 const TechStackTicker = () => {
   return (
-    <div id="servicios" className="scroll-mt-24 w-full py-12 border-y border-neutral-100 bg-white overflow-hidden relative">
-      <div className="max-w-7xl mx-auto px-6 mb-6">
-        <p className="text-[10px] font-mono uppercase tracking-[0.4em] text-neutral-400 text-center font-bold">
+    <div id="servicios" className="scroll-mt-24 w-full py-12 border-y border-neutral-200/50 bg-neutral-50 overflow-hidden relative">
+      <div className="max-w-7xl mx-auto px-6 mb-8">
+        <p className="text-[13px] font-mono uppercase tracking-[0.3em] text-neutral-400 text-center font-bold">
           Integración fluida con tu ecosistema tecnológico
         </p>
       </div>

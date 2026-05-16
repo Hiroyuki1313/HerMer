@@ -218,15 +218,15 @@ export const SERVICES: Service[] = [
     ],
     projects: [
       {
-        title: "Portal B2B Comercial",
-        description: "Plataforma de autogestión para clientes con integración en tiempo real al ERP para consulta de inventario, historial y pedidos.",
-        metrics: ["Sincronización ERP", "Catálogo dinámico", "Cotización automática"],
+        title: "Vexa - Landing Page Premium",
+        description: "Plataforma de alto impacto visual para el lanzamiento de una marca de bloqueadores. Diseño moderno con animaciones inmersivas para maximizar el reconocimiento de marca.",
+        metrics: ["Diseño editorial", "Animaciones fluidas", "Optimización SEO"],
         mockup: "/screencapture-vexa.png"
       },
       {
-        title: "App Logística en Ruta",
-        description: "App móvil para escaneo de inventario, ruteo inteligente y confirmación de entregas con firmas y coordenadas.",
-        metrics: ["Escaneo de códigos", "Ubicación GPS", "Modo offline soportado"],
+        title: "By Chino - E-commerce",
+        description: "Catálogo digital y tienda online para marca de tablas de cocina artesanales. Plataforma escalable pensada para cotizaciones dinámicas y venta automatizada.",
+        metrics: ["Catálogo dinámico", "Cotizaciones online", "Experiencia de usuario"],
         mockup: "/screencapture-by-chino.png"
       }
     ],
